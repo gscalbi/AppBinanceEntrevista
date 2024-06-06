@@ -10,18 +10,4 @@ import com.fatal.appbinanceentrevista.data.dataSource.local.entity.TickerEntity
 @Database(entities = [TickerEntity::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun tickerDao(): TickerDao
-
-    companion object {
-        @Volatile private var instance: AppDatabase? = null
-        private val LOCK = Any()
-
-        fun getInstance(context: Context): AppDatabase {
-            return instance ?: synchronized(LOCK) {
-                instance ?: Room.databaseBuilder(
-                    context.applicationContext,
-                    AppDatabase::class.java, "ticker_database"
-                ).build().also { instance = it }
-            }
-        }
-    }
 }
