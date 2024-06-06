@@ -1,11 +1,9 @@
 package com.fatal.appbinanceentrevista.di
 
-import android.content.Context
 import com.fatal.appbinanceentrevista.data.dataSource.remote.websocket.BinanceWebSocketClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import java.net.URI
 import javax.inject.Singleton

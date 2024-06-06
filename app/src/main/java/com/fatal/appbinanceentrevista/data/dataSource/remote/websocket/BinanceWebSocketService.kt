@@ -1,6 +1,5 @@
 package com.fatal.appbinanceentrevista.data.dataSource.remote.websocket
 
-import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -15,8 +14,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.net.URI
 import javax.inject.Inject
+
 @AndroidEntryPoint
 class BinanceWebSocketService : Service() {
 
